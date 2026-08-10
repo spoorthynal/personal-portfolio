@@ -1,0 +1,23 @@
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.bigLink {
+  display: block;
+  background: #fff;
+  border: 2px solid #fbe3d6;
+  border-radius: 16px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: #4a3b52;
+  font-weight: 800;
+  font-size: 16px;
+}
+.bigLink:hover {
+  opacity: 0.88;
+  border-color: #f2b24c;
+}

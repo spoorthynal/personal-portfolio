@@ -1,0 +1,7 @@
+.page {
+  min-height: 100vh;
+  background: radial-gradient(120% 80% at 50% -10%, #fff7f0, #ffefe4 55%, #fce6dc);
+  color: #4a3b52;
+  font-family: "Nunito", ui-rounded, system-ui, sans-serif;
+  box-sizing: border-box;
+}

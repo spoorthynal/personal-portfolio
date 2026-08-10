@@ -1,0 +1,31 @@
+.page {
+  max-width: 720px;
+  margin: 10px auto;
+  padding: 10px 24px 60px;
+}
+
+.back {
+  background: none;
+  border: none;
+  color: #c86b8f;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 0;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.heading {
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 6px 0 18px;
+}
+
+.body {
+  color: #6e5e74;
+  line-height: 1.7;
+  font-size: 16px;
+}
