@@ -2,47 +2,47 @@
 // `href` + `external: true` is an outbound link (resume file, GitHub, LinkedIn).
 export const MAP = {
   granola: {
-    section: "Resume",
+    section: "GitHub",
     color: "#C89B6B",
     emoji: "🌾",
     label: "Granola",
-    blurb: "The base of it all — education, experience, skills.",
-    href: "#", // TODO: link to your resume PDF (e.g. "/resume.pdf" in /public)
-    external: true,
-  },
-  blueberry: {
-    section: "Projects",
-    color: "#5B6FB0",
-    emoji: "🫐",
-    label: "Blueberries",
-    blurb: "The colorful highlights — things I've built.",
-    to: "/projects",
-  },
-  strawberry: {
-    section: "GitHub",
-    color: "#E4586B",
-    emoji: "🍓",
-    label: "Strawberries",
     blurb: "Where the code lives — repos & commits.",
     href: "#", // TODO: your GitHub profile URL
     external: true,
   },
-  coconut: {
+  blueberry: {
     section: "LinkedIn",
-    color: "#8FB63C",
-    emoji: "🥥",
-    label: "Coconut",
+    color: "#5B6FB0",
+    emoji: "🫐",
+    label: "Blueberries",
     blurb: "Let's connect professionally.",
     href: "#", // TODO: your LinkedIn profile URL
     external: true,
   },
-  banana: {
+  strawberry: {
+    section: "Projects",
+    color: "#E4586B",
+    emoji: "🍓",
+    label: "Strawberries",
+    blurb: "The colorful highlights — things I've built.",
+    to: "/projects",
+  },
+  coconut: {
     section: "Contact",
+    color: "#8FB63C",
+    emoji: "🥥",
+    label: "Coconut",
+    blurb: "Say hi — always room for more.",
+    to: "/contact",
+  },
+  banana: {
+    section: "Resume",
     color: "#F2D479",
     emoji: "🍌",
     label: "Banana",
-    blurb: "Say hi — always room for more.",
-    to: "/contact",
+    blurb: "The base of it all — education, experience, skills.",
+    href: "#", // TODO: link to your resume PDF (e.g. "/resume.pdf" in /public)
+    external: true,
   },
   acai: {
     section: "About",
@@ -54,6 +54,6 @@ export const MAP = {
   },
 };
 
-export const LEFT = ["granola", "blueberry", "acai"];
-export const RIGHT = ["strawberry", "coconut", "banana"];
+export const LEFT = ["acai", "strawberry", "banana"];
+export const RIGHT = ["blueberry", "granola", "coconut"];
 export const ORDER = [...LEFT, ...RIGHT];

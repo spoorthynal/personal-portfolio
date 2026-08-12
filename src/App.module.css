@@ -1,5 +1,8 @@
 .page {
   min-height: 100vh;
+  /* padding-bottom (not margin) so a child's trailing margin can't collapse
+     through and expose the body's background past the gradient's edge. */
+  padding-bottom: 1px;
   background: radial-gradient(120% 80% at 50% -10%, #fff7f0, #ffefe4 55%, #fce6dc);
   color: #4a3b52;
   font-family: "Nunito", ui-rounded, system-ui, sans-serif;

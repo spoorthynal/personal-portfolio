@@ -47,8 +47,9 @@ function makeDesaturatable(material) {
   return clone;
 }
 
-function Model({ isOn, pick, active, hovered, setHovered, cursorTarget, isDragging }) {
+function Model({ isOn, pick, active, hovered, setHovered, cursorTarget, isDragging, scrollRef }) {
   const { nodes } = useGLTF(MODEL_URL);
+  const rootGroupRef = useRef(null);
 
   const ingredientMaterials = useMemo(() => {
     const byMaterialName = {};
@@ -100,12 +101,27 @@ function Model({ isOn, pick, active, hovered, setHovered, cursorTarget, isDraggi
       group.scale.x += (targetScale - group.scale.x) * Math.min(delta * 10, 1);
       group.scale.y = group.scale.z = group.scale.x;
     }
+
+    // Spin + tumble tied to page scroll, eased toward its target each frame
+    // so it glides instead of jumping. Y keeps turning continuously; X/Z nod
+    // and roll on a sine so it reads as a 3D tumble rather than a flat spin.
+    if (rootGroupRef.current) {
+      const s = scrollRef.current;
+      const targetY = Math.PI + s * 0.004;
+      const targetX = Math.sin(s * 0.0035) * 0.28;
+      const targetZ = Math.sin(s * 0.002) * 0.14;
+      const rot = rootGroupRef.current.rotation;
+      const ease = Math.min(delta * 3, 1);
+      rot.y += (targetY - rot.y) * ease;
+      rot.x += (targetX - rot.x) * ease;
+      rot.z += (targetZ - rot.z) * ease;
+    }
   });
 
   if (!nodes.Object_2) return null;
 
   return (
-    <group rotation={[0, Math.PI, 0]}>
+    <group ref={rootGroupRef} rotation={[0, Math.PI, 0]}>
       {/* bowl vessel — structural, not clickable */}
       <primitive object={nodes.Object_3} />
 
@@ -143,6 +159,7 @@ export default function Bowl3D({ isOn, pick, active }) {
   const [hovered, setHovered] = useState(null);
   const wrapRef = useRef(null);
   const isDragging = useRef(false);
+  const scrollRef = useRef(window.scrollY);
 
   useEffect(() => {
     const stopDrag = () => {
@@ -151,6 +168,14 @@ export default function Bowl3D({ isOn, pick, active }) {
     };
     window.addEventListener("pointerup", stopDrag);
     return () => window.removeEventListener("pointerup", stopDrag);
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      scrollRef.current = window.scrollY;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -175,6 +200,7 @@ export default function Bowl3D({ isOn, pick, active }) {
             setHovered={setHovered}
             cursorTarget={wrapRef}
             isDragging={isDragging}
+            scrollRef={scrollRef}
           />
           <Environment preset="apartment" />
         </Suspense>
