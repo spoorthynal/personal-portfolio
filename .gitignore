@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Raw 3D model source (unoptimized) — public/acai_bowl.glb is the compressed
+# version actually served; keep the original locally for future re-exports.
+model-source/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

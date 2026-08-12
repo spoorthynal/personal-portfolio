@@ -1,17 +1,21 @@
+.page {
+  padding-top: 64px;
+}
+
 .header {
   text-align: center;
   max-width: 640px;
-  margin: 10px auto 0;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
-.eyebrow {
-  text-transform: lowercase;
-  letter-spacing: 0.16em;
-  font-size: 12px;
+.welcome {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 13px;
   color: #c86b8f;
   font-weight: 800;
-  margin: 0 0 6px;
+  margin: 0 0 10px;
 }
 
 .h1 {
@@ -42,6 +46,11 @@
   display: grid;
   place-items: center;
   flex: 0 0 auto;
+}
+
+.bowlPlaceholder {
+  width: 320px;
+  height: 320px;
 }
 
 .footerRow {

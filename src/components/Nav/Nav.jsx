@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Nav.module.css";
 import { cx } from "../../utils/cx";
+import acaiBowl from "../../assets/acai-bowl.png";
 
 const ITEMS = [
   { to: "/", label: "home", end: true },
@@ -12,7 +13,10 @@ const ITEMS = [
 export default function Nav() {
   return (
     <nav className={styles.nav}>
-      <span className={styles.brand}>🫐 spoorthy</span>
+      <span className={styles.brand}>
+        <img src={acaiBowl} alt="" className={styles.brandIcon} />
+        spoorthy
+      </span>
       <ul className={styles.menu}>
         {ITEMS.map(({ to, label, end }) => (
           <li key={to}>

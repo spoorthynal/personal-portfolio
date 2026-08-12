@@ -27,11 +27,11 @@ export const MAP = {
     href: "#", // TODO: your GitHub profile URL
     external: true,
   },
-  kiwi: {
+  coconut: {
     section: "LinkedIn",
     color: "#8FB63C",
-    emoji: "🥝",
-    label: "Kiwi",
+    emoji: "🥥",
+    label: "Coconut",
     blurb: "Let's connect professionally.",
     href: "#", // TODO: your LinkedIn profile URL
     external: true,
@@ -55,5 +55,5 @@ export const MAP = {
 };
 
 export const LEFT = ["granola", "blueberry", "acai"];
-export const RIGHT = ["strawberry", "kiwi", "banana"];
+export const RIGHT = ["strawberry", "coconut", "banana"];
 export const ORDER = [...LEFT, ...RIGHT];

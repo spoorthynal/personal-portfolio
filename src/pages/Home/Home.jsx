@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import styles from "./Home.module.css";
-import Bowl from "../../components/Bowl/Bowl";
 import Rail from "../../components/Rail/Rail";
 import InfoPanel from "../../components/InfoPanel/InfoPanel";
 import { LEFT, RIGHT, ORDER } from "../../data/ingredients";
+
+const Bowl3D = lazy(() => import("../../components/Bowl3D/Bowl3D"));
 
 export default function Home() {
   const [colored, setColored] = useState([]);
@@ -22,9 +23,9 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className={styles.page}>
       <header className={styles.header}>
-        <p className={styles.eyebrow}>tap an ingredient · watch it come to life</p>
+        <p className={styles.welcome}>👋 Welcome — this is my portfolio. Get to know me below.</p>
         <h1 className={styles.h1}>Build my bowl.</h1>
         <p className={styles.sub}>
           It starts black &amp; white. Tap an ingredient on the side — or right in the bowl — to
@@ -35,7 +36,9 @@ export default function Home() {
       <div className={styles.stage}>
         <Rail ids={LEFT} isOn={isOn} pick={pick} active={active} side="left" />
         <div className={styles.bowlHolder}>
-          <Bowl isOn={isOn} pick={pick} active={active} />
+          <Suspense fallback={<div className={styles.bowlPlaceholder} />}>
+            <Bowl3D isOn={isOn} pick={pick} active={active} />
+          </Suspense>
         </div>
         <Rail ids={RIGHT} isOn={isOn} pick={pick} active={active} side="right" />
       </div>
@@ -52,6 +55,6 @@ export default function Home() {
       </div>
 
       <InfoPanel activeId={active} />
-    </>
+    </div>
   );
 }
