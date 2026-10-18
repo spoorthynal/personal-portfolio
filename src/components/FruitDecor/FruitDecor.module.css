@@ -1,0 +1,50 @@
+/* Fixed to the screen below the nav, so the fruit frames every section
+   as you scroll. Sits above the page content but only in the side gutters
+   (and the container ignores the mouse), so it never blocks anything. */
+.decor {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Each side covers the gutter between the page edge and the centered content. */
+.side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc((100% - 880px) / 2);
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+
+.piece {
+  position: absolute;
+  height: auto;
+  opacity: 0.92;
+  filter: drop-shadow(0 6px 10px rgba(200, 107, 143, 0.12));
+  transform: rotate(var(--rot));
+  /* The container ignores the mouse; each piece opts back in for hover. */
+  pointer-events: auto;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s, opacity 0.3s;
+}
+.piece:hover {
+  opacity: 1;
+  transform: rotate(calc(var(--rot) + 8deg)) scale(1.08);
+  filter: drop-shadow(0 12px 18px rgba(200, 107, 143, 0.24));
+}
+
+/* No gutter to fill on narrower screens — hide rather than overlap content. */
+@media (max-width: 1100px) {
+  .decor {
+    display: none;
+  }
+}

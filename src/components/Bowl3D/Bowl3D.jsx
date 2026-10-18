@@ -17,7 +17,7 @@ const NODE_INGREDIENT = {
 
 // The granola mesh has whitish flecks that read as coconut shavings, and
 // there's no separate coconut geometry — so clicking granola also reveals
-// coconut/LinkedIn. Granola is picked last so it stays the active panel.
+// coconut/LinkedIn. Granola stays the active panel.
 const DUAL_REVEAL = { granola: "coconut" };
 
 // Banana's texture renders too pale/cream — multiply-tint it more yellow.
@@ -131,9 +131,7 @@ function Model({ isOn, pick, active, hovered, setHovered, cursorTarget, isDraggi
             object={ingredientNodes[nodeName]}
             onClick={(e) => {
               e.stopPropagation();
-              const also = DUAL_REVEAL[id];
-              if (also) pick(also);
-              pick(id);
+              pick(id, DUAL_REVEAL[id]);
             }}
             onPointerOver={(e) => {
               e.stopPropagation();

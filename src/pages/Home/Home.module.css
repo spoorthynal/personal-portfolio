@@ -1,32 +1,44 @@
 .page {
-  padding-top: 64px;
+  padding-top: 40px;
+  /* Fill the screen below the nav so the background fruit isn't cut off. */
+  min-height: calc(100vh - 72px);
 }
 
 .header {
   text-align: center;
-  max-width: 640px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .welcome {
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: 0.14em;
-  font-size: 13px;
+  font-size: 16px;
   color: #c86b8f;
   font-weight: 800;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
+  white-space: nowrap;
+}
+
+/* Let it wrap on small screens rather than run off the edge. */
+@media (max-width: 760px) {
+  .welcome {
+    white-space: normal;
+  }
 }
 
 .h1 {
   font-family: "Fraunces", serif;
-  font-size: 44px;
+  font-size: 40px;
   margin: 0 0 8px;
   font-weight: 600;
 }
 
 .sub {
-  margin: 0;
+  /* Keep the description at its original width even though the header widened. */
+  max-width: 600px;
+  margin: 0 auto;
   color: #8a7a90;
   font-size: 15px;
 }
@@ -37,20 +49,21 @@
   align-items: center;
   justify-content: center;
   max-width: 860px;
-  margin: 22px auto 0;
+  margin: 18px auto 0;
   padding: 0 16px;
   flex-wrap: wrap;
 }
 
 .bowlHolder {
+  position: relative;
   display: grid;
   place-items: center;
   flex: 0 0 auto;
 }
 
 .bowlPlaceholder {
-  width: 320px;
-  height: 320px;
+  width: 290px;
+  height: 290px;
 }
 
 .footerRow {
@@ -58,7 +71,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  margin-top: 14px;
+  margin-top: -6px;
 }
 
 .counter {
@@ -70,16 +83,25 @@
 }
 
 .reset {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
   background: #fbe3d6;
   border: none;
   color: #c86b8f;
   font-weight: 800;
-  border-radius: 20px;
-  padding: 7px 14px;
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 18px;
   font-family: inherit;
+  transition: transform 0.2s, background 0.15s;
 }
 .reset:hover {
   background: #f7d3c2;
+  transform: rotate(-90deg);
 }

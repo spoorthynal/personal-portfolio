@@ -1,21 +1,11 @@
 .page {
   max-width: 720px;
-  margin: 10px auto;
-  padding: 10px 24px 60px;
+  margin: 0 auto;
+  padding: 56px 24px 64px;
+  /* Land below the sticky nav when scrolled to. */
+  scroll-margin-top: 72px;
 }
 
-.back {
-  background: none;
-  border: none;
-  color: #c86b8f;
-  font-weight: 800;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 6px 0;
-  font-family: inherit;
-  text-decoration: none;
-  display: inline-block;
-}
 
 .heading {
   font-family: "Fraunces", serif;

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./InfoPanel.module.css";
 import { MAP } from "../../data/ingredients";
 
@@ -25,9 +24,9 @@ export default function InfoPanel({ activeId }) {
           Open {m.section} →
         </a>
       ) : (
-        <Link className={styles.cta} to={m.to}>
+        <a className={styles.cta} href={m.to}>
           Open {m.section} →
-        </Link>
+        </a>
       )}
     </div>
   );

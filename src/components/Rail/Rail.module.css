@@ -4,8 +4,8 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  min-width: 180px;
+  gap: 10px;
+  min-width: 175px;
   flex: 0 1 200px;
 }
 .left {
@@ -27,7 +27,7 @@
   background: #fff;
   border: 2px solid #fbe3d6;
   border-radius: 16px;
-  padding: 9px 12px;
+  padding: 8px 11px;
   cursor: pointer;
   transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
   box-shadow: 0 4px 12px rgba(200, 107, 143, 0.06);
@@ -56,12 +56,12 @@
 }
 
 .chipEmoji {
-  width: 36px;
-  height: 36px;
+  width: 33px;
+  height: 33px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 18px;
+  font-size: 17px;
   flex-shrink: 0;
   transition: all 0.4s;
   box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.08);

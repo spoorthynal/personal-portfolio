@@ -1,6 +1,6 @@
 .canvasWrap {
-  width: 320px;
-  height: 320px;
+  width: 290px;
+  height: 290px;
   touch-action: none;
   cursor: grab;
 }

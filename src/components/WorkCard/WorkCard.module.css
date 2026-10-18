@@ -1,0 +1,68 @@
+.card {
+  background: #fff;
+  border: 2px solid #fbe3d6;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(200, 107, 143, 0.08);
+  /* Column layout so the tags line up along the bottom of each card. */
+  display: flex;
+  flex-direction: column;
+}
+
+.thumb {
+  height: 96px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ead9f0, #f7dce6);
+  margin-bottom: 12px;
+}
+
+.heading {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #c86b8f;
+}
+
+.description {
+  margin: 0;
+  font-size: 14px;
+  color: #8a7a90;
+}
+
+.tags {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 12px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Cycles through the site's palette: pink, purple, green, honey. */
+.tag {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fbe3d6;
+  color: #c86b8f;
+}
+.tag:nth-child(4n + 2) {
+  background: #ead9f0;
+  color: #6b4e8c;
+}
+.tag:nth-child(4n + 3) {
+  background: #e3f1e6;
+  color: #4f8460;
+}
+.tag:nth-child(4n + 4) {
+  background: #fdeccd;
+  color: #a86d12;
+}

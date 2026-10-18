@@ -1,0 +1,35 @@
+/* Zero-width so the cursor never pushes the text around. */
+.caret {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0.9em;
+  vertical-align: -0.08em;
+  animation: blink 1s steps(1) infinite;
+}
+.caret::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #c86b8f;
+  border-radius: 2px;
+}
+
+.rest {
+  visibility: hidden;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.caretDone {
+  animation: none;
+  opacity: 0;
+  transition: opacity 0.4s ease 0.8s;
+}
