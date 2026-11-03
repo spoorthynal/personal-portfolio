@@ -19,3 +19,10 @@
   line-height: 1.7;
   font-size: 16px;
 }
+
+/* The nav stacks into two rows on phones, so land further down. */
+@media (max-width: 640px) {
+  .page {
+    scroll-margin-top: 136px;
+  }
+}

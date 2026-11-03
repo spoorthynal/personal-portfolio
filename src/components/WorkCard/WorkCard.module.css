@@ -9,13 +9,6 @@
   flex-direction: column;
 }
 
-.thumb {
-  height: 96px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #ead9f0, #f7dce6);
-  margin-bottom: 12px;
-}
-
 .heading {
   margin: 0 0 4px;
   font-size: 17px;
@@ -53,6 +46,13 @@
   border-radius: 999px;
   background: #fbe3d6;
   color: #c86b8f;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+/* Lift with a soft glow in the tag's own text color, so each palette color
+   gets a matching shadow. */
+.tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px -3px currentColor;
 }
 .tag:nth-child(4n + 2) {
   background: #ead9f0;

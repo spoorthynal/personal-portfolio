@@ -4,7 +4,7 @@ import Rail from "../../components/Rail/Rail";
 import InfoPanel from "../../components/InfoPanel/InfoPanel";
 import TypingText from "../../components/TypingText/TypingText";
 import { LEFT, RIGHT, ORDER } from "../../data/ingredients";
-import { playPlop } from "../../utils/playPlop";
+import { playClick } from "../../utils/playClick";
 
 const Bowl3D = lazy(() => import("../../components/Bowl3D/Bowl3D"));
 
@@ -16,9 +16,9 @@ export default function Home() {
   const allOn = colored.length === ORDER.length;
 
   // `also` lets one click reveal a second ingredient (see DUAL_REVEAL in Bowl3D)
-  // while still playing a single plop.
+  // while still playing a single click.
   const pick = (id, also) => {
-    playPlop();
+    playClick();
     setActive(id);
     const ids = also ? [also, id] : [id];
     setColored((prev) => [...prev, ...ids.filter((x) => !prev.includes(x))]);

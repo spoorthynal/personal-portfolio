@@ -12,3 +12,10 @@
 .section {
   scroll-margin-top: 72px;
 }
+
+/* The nav stacks into two rows on phones, so land further down. */
+@media (max-width: 640px) {
+  .section {
+    scroll-margin-top: 136px;
+  }
+}

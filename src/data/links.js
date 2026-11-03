@@ -1,6 +1,5 @@
-// TODO: fill in your real links
 export const LINKS = {
-  resume: "#",
+  resume: "https://drive.google.com/file/d/1OQEUYJ2BwpVQ-Z0WFIpQQTmXkGbg-wWr/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/spoorthy-nalumachu",
   github: "https://github.com/spoorthynal",
   email: "mailto:spoorthynal@g.ucla.edu",

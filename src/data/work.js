@@ -1,4 +1,3 @@
-// TODO: replace with your real work/projects
 export const WORK = [
   {
     id: "work-1",
@@ -6,7 +5,7 @@ export const WORK = [
     subtitle: "Bobrick",
     description: "Built an agentic AI workflow that analyzes customer complaint data and machine data to identify root causes for defects and gain insights into how to improve product quality.",
     link: "#",
-    skills: ["Skill 1", "Skill 2", "Skill 3", "Skill 4"], // TODO: add your real skills
+    skills: ["AI Agents", "RAG", "Supabase", "SQL"],
   },
   {
     id: "work-2",
@@ -14,7 +13,7 @@ export const WORK = [
     subtitle: "Code for the Community",
     description: "Led a team of designers and developers to successfully complete a humanitarian relief app that helps support grassroots actions.",
     link: "#",
-    skills: ["Skill 1", "Skill 2", "Skill 3", "Skill 4"], // TODO: add your real skills
+    skills: ["Tableau", "Data Analysis", "Trello", "Dashboards"],
   },
   {
     id: "work-3",
@@ -22,31 +21,30 @@ export const WORK = [
     subtitle: "AI4ALL",
     description: "Learned machine learning fundamentals and applied them to a breast cancer classification project using Python and Keras to train a CNN model on mammogram images.",
     link: "#",
-    skills: ["Skill 1", "Skill 2", "Skill 3", "Skill 4"], // TODO: add your real skills
+    skills: ["Python", "TensorFlow", "ML Models"],
   },
 ];
 
-// TODO: replace with your real projects
 export const PROJECTS = [
   {
     id: "project-1",
     title: "CareCoord",
-    description: "One-line description of what it does and the stack behind it.",
+    description: "A hospital coordination platform to streamline patient flow, bed management, and laboratory scheduling through an autonomous scheduling agent.",
     link: "#",
-    skills: ["Skill 1", "Skill 2", "Skill 3", "Skill 4"], // TODO: add your real skills
+    skills: ["Swift", "MongoDB", "AWS Lambda"], 
   },
   {
     id: "project-2",
     title: "Stash",
-    description: "One-line description of what it does and the stack behind it.",
+    description: "A centralized productivity platform for organizing notes and files in a searchable workspace using Google Gemini to automate content tagging and keyword extraction.",
     link: "#",
-    skills: ["Skill 1", "Skill 2", "Skill 3", "Skill 4"], // TODO: add your real skills
+    skills: ["React", "Node.js", "SQL", "Gemini API"], 
   },
   {
     id: "project-3",
     title: "ClubHub",
-    description: "One-line description of what it does and the stack behind it.",
+    description: "A mobile app to help UCLA students discover 2,000+ campus clubs through real-time search and personalized exploration with an AI-powered recommendation feature.",
     link: "#",
-    skills: ["Skill 1", "Skill 2", "Skill 3", "Skill 4"], // TODO: add your real skills
+    skills: ["React Native", "Firebase", "Figma", "LLM Integration"],
   },
 ];

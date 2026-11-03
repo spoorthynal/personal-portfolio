@@ -26,3 +26,7 @@ model-source/
 *.njsproj
 *.sln
 *.sw?
+
+# Original phone photos (full size, with GPS data). The site uses the
+# resized, metadata-free copies in src/assets/about/.
+src/assets/image*.JPG

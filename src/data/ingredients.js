@@ -1,3 +1,5 @@
+import { LINKS } from "./links";
+
 // Each ingredient maps to a portfolio section. `to` is an in-page section anchor;
 // `href` + `external: true` is an outbound link (resume file, GitHub, LinkedIn).
 export const MAP = {
@@ -6,7 +8,7 @@ export const MAP = {
     color: "#C89B6B",
     emoji: "🌾",
     label: "Granola",
-    href: "https://github.com/spoorthynal", // TODO: your GitHub profile URL
+    href: LINKS.github,
     external: true,
   },
   blueberry: {
@@ -14,7 +16,7 @@ export const MAP = {
     color: "#5B6FB0",
     emoji: "🫐",
     label: "Blueberries",
-    href: "https://www.linkedin.com/in/spoorthy-nalumachu",
+    href: LINKS.linkedin,
     external: true,
   },
   strawberry: {
@@ -36,7 +38,7 @@ export const MAP = {
     color: "#F2D479",
     emoji: "🍌",
     label: "Banana",
-    href: "#", // TODO: link to your resume PDF (e.g. "/resume.pdf" in /public)
+    href: LINKS.resume,
     external: true,
   },
   acai: {
