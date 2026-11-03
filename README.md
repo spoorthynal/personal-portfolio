@@ -1,3 +1,3 @@
 # Personal Portfolio
 
-Hi! Here is a link to my personal portfolio: _coming soon_
+Hi! This is the repo for my personal portfolio.
